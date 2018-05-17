@@ -1,0 +1,62 @@
+﻿[
+  {
+    "id": 1887,
+    "title": "Angular up",
+    "category": "web",
+    "isbn": "338829392-9"
+  },
+  {
+    "id": 2897,
+    "title": "NativeScript in Action",
+    "category": "mobile",
+    "isbn": "976950852-7"
+  },
+  {
+    "id": 8370,
+    "title": "Using React & Redux",
+    "category": "web",
+    "isbn": "142028939-X"
+  },
+  {
+    "id": 2391,
+    "title": "Data Visualisation",
+    "category": "data engineering",
+    "isbn": "236585791-4"
+  },
+  {
+    "id": 5648,
+    "title": "Build Robot with JavaScript",
+    "category": "iot",
+    "isbn": "184930653-2"
+  },
+  {
+    "id": 5670,
+    "title": "Efficient JavaScript",
+    "category": "web",
+    "isbn": "044806024-8"
+  },
+  {
+    "id": 9087,
+    "title": "Learning React Native",
+    "category": "mobile",
+    "isbn": "715963804-2"
+  },
+  {
+    "id": 8007,
+    "title": "Functional Programming",
+    "category": "web",
+    "isbn": "423817726-6"
+  },
+  {
+    "id": 9997,
+    "title": "Building Web JavaScript Applications",
+    "category": "web",
+    "isbn": "728133551-2"
+  },
+  {
+    "id": 1847,
+    "title": "Introduction to IoT with Tessel",
+    "category": "iot",
+    "isbn": "961396759-1"
+  }
+]
