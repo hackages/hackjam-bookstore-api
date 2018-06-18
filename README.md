@@ -1,31 +1,31 @@
 # HackJam ASP.NET Core Bookstore api
-Durant cet Hackjam vous apprendrez les bases du développement d'applications ASP.NET Core !
+During this Hackjam you'll learn the basics of ASP.Net core application development !
 
-## Un rapide historique avant de commencer
-Fin Juin 2016, Microsoft annonce la sortie de son tout nouveau framework de développement d'applications Web, open-source et multiplate-forme, ASP.NET Core 1.0.
+## A quick history before you start
+End June 2016, Microsoft announces the release of its new open-source and cross-platform Web application development framework, ASP.NET Core 1.0.
 
-Celui-ci s'inscrit tout naturellement dans la réécriture de l'entièreté du Framework .Net sous licence open-source, nommé de .Net Core...
+This one is part of the rewriting of the entire .Net Framework under open-source license, named .Net Core...
 
-ASP.NET Core se veut plus modulable, plus performant et surtout multiplate-formes ! (plus d'infos [ici](https://docs.microsoft.com/fr-fr/aspnet/core/choose-aspnet-framework))
+ASP.NET Core is more scalable, more powerful and especially multiplatform! (more info [here](https://docs.microsoft.com/en/aspnet/core/choose-aspnet-framework))
 
-La version actuelle d'ASP.NET Core est la version 2.1.
+The current version of ASP.NET Core is version 2.1.
 
-## Pour commencer
+## To get started
 ```Bash
 git clone https://github.com/hackages/hackjam-bookstore-api.git
 cd hackjam-bookstore-api/BookstoreWebApi
 dotnet run
 ```
 
-## Ce qu'il faut savoir...
+## What you need to know...
 
 ### [Program.cs](https://docs.microsoft.com/fr-fr/aspnet/core/fundamentals/?view=aspnetcore-2.0&tabs=aspnetcore2x)
-Le template de base lorsqu'on crée une application .Net Core contient une classe "Program".
-Cette classe fournit la méthode "Main", point d'entrée de notre application...
+The basic template when creating a Net Core application contains a "Program" class.
+This class provides the "Main" method, entry point of our application...
 
-Une application ASP.Net Core est tout simplement une application console qui crée une serveur web dans sa méthode "Main".
+An ASP.Net Core application is simply a console application that creates a web server in its "Main" method.
 
-Voici un exemple de base de création d'un serveur web.
+Here is a basic example of how to create a web server.
 
 ```csharp
 using Microsoft.AspNetCore;
@@ -49,10 +49,10 @@ namespace aspnetcoreapp
 ```
 
 ### [Startup.cs](https://docs.microsoft.com/fr-fr/aspnet/core/fundamentals/startup?view=aspnetcore-2.0)
-La classe "Startup" est fournie au serveur web lors de sa création.
-Cette classe configure notre serveur web au travers de deux méthodes "ConfigureServices" et "Configure"
+The "Startup" class is provided to the web server when it is created.
+This class configures our web server through two methods "ConfigureServices" and "Configure".
 
-Voici un exemple de base : 
+Here is a basic example: 
 ```csharp
 public class Startup
 {
@@ -72,9 +72,9 @@ public class Startup
 
 
 #### ConfigureServices()
-Cette méthode reçoit en paramètre une instance de "IServiceCollection".
-"IServiceCollection" est la classe qui définit les services que l'on souhaite utiliser dans l'application.
-Si l'on souhaite configurer notre application pour utiliser le framework MVC, il nous suffit d'ajouter la ligne suivante :
+This method receives an instance of "IServiceCollection" as parameter.
+"IServiceCollection" is the class that defines the services to be used in the application.
+If we want to configure our application to use the MVC framework, we just need to add the following line :
 
 ```csharp
 // Use this method to add services to the container.
@@ -85,25 +85,25 @@ Si l'on souhaite configurer notre application pour utiliser le framework MVC, il
         ...
     }
 ```
-##### [Injection de dépendances](https://docs.microsoft.com/fr-fr/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.0)
-Asp.Net Core contient un système d'injection de dépendance "out of the box".
-On peut donc enregistrer des dépendances qui pourront être injecter durant tout le cycle de vie de l'application.
+##### [Dependency Injection](https://docs.microsoft.com/en/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.0)
+Asp.Net Core contains a built-in dependency injection system.
+We can therefore register dependencies that will be injected throughout the entire application life cycle.
 
-Exemple d'enregistrement de la classe "MonBusiness" au sein du système :
+Example : Registration of "MyBusiness" class within the system:
 ```csharp
 // Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
         ...
-        services.AddScoped<IMonBusiness, MonBusiness>();
+        services.AddScoped<IMyBusiness, MyBusiness>();
         ...
     }
 ```
 
 #### Configure()
-La méthode "Configure" permet de définir un pipeline de middleware que toutes les requêtes emprunteront.
+The "Configure" method allows to define a middleware pipeline that all requests will traverse.
 
-Par exemple, "MVC" est un middleware qui doit être définit dans cette méthode.
+For example, "MVC" is a middleware that has to be defined in this method.
 
 ```csharp
 // Use this method to configure the HTTP request pipeline.
@@ -113,14 +113,14 @@ Par exemple, "MVC" est un middleware qui doit être définit dans cette méthode
         app.UseMvC();
     }
 ```
-Lorsque la requête atteindra le middleware MVC, elle sera redirigé vers le bon controleur et l'action à exécuter.
+When the request reaches the MVC middleware, it will be redirected to the right controller and action to execute.
 
 ### [Routing](https://docs.microsoft.com/fr-fr/aspnet/core/fundamentals/routing?view=aspnetcore-2.0)
 
 
-## Que faire ?
-Un application Asp.Net Core est mise à votre disposition. L'application à été cassée ~~vicieusement~~ par mes soins.
-Votre mission est de la faire fonctionner à nouveau et ainsi permettre la communication avec une application cliente.
+## What to do ?
+An Asp.Net Core application is available. The application was ~~viciously~~ broken by me.
+Your mission is to make it work again and thus allow communication with a client application.
 
 ## Bonus
-Implémentez la création d'une entité "Book" au travers d'un appel "Post" au controleur "BooksController"
+Implement the creation of a "Book" entity through a "Post" call to the "BooksController".
