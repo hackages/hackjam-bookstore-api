@@ -19,7 +19,7 @@ dotnet run
 
 ## What you need to know...
 
-### [Program.cs](https://docs.microsoft.com/fr-fr/aspnet/core/fundamentals/?view=aspnetcore-2.0&tabs=aspnetcore2x)
+### [Program.cs](https://docs.microsoft.com/en/aspnet/core/fundamentals/?view=aspnetcore-2.0&tabs=aspnetcore2x)
 The basic template when creating a Net Core application contains a "Program" class.
 This class provides the "Main" method, entry point of our application...
 
@@ -48,7 +48,7 @@ namespace aspnetcoreapp
 }
 ```
 
-### [Startup.cs](https://docs.microsoft.com/fr-fr/aspnet/core/fundamentals/startup?view=aspnetcore-2.0)
+### [Startup.cs](https://docs.microsoft.com/en/aspnet/core/fundamentals/startup?view=aspnetcore-2.0)
 The "Startup" class is provided to the web server when it is created.
 This class configures our web server through two methods "ConfigureServices" and "Configure".
 
@@ -115,7 +115,7 @@ For example, "MVC" is a middleware that has to be defined in this method.
 ```
 When the request reaches the MVC middleware, it will be redirected to the right controller and action to execute.
 
-### [Routing](https://docs.microsoft.com/fr-fr/aspnet/core/fundamentals/routing?view=aspnetcore-2.0)
+### [Routing](https://docs.microsoft.com/en/aspnet/core/fundamentals/routing?view=aspnetcore-2.0)
 
 
 ## What to do ?
